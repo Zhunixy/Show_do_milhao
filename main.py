@@ -72,33 +72,44 @@ perguntas = [
 
 i = 0
 vc_errou = False
-print("*" * 60)
-print("Bem vindo ao show do milhão")
-print("*" * 60)
+print("•─────────★•♛•★────────• ")
+print("Bem vindo ao Show do Pythão!")
+print("•─────────★•♛•★────────• ")
 
 while i < 10:
     try:
         print(perguntas[i]["pergunta"])
         print(f"A) {perguntas[i]['opcoes'][0]} \nB) {perguntas[i]['opcoes'][1]} \nC) {perguntas[i]['opcoes'][2]} \nD) {perguntas[i]['opcoes'][-1]}")
+        print("•─────────★•♛•★────────• ")
         print("1 -> responder")
         print("2 -> auxilio")
         print("3 -> pular")
         print("0 -> sair")
+        print("•─────────★•♛•★────────• ")
         while True:            
             opcao = int(input(">>"))
             match opcao:
                 case 1:
                     escolha = input("Resposta:")
                     if escolha.upper() == perguntas[i]['resposta']:
+                        os.system("cls")
+                        print("---⭐---")
                         print("Parabéns! você acertou!")
+                        print("•─────────★•♛•★────────• ")
                         break
                     else:
+                        print("•─────────★•♛•★────────• ")
                         print("Você errou! 😂")
+                        print("•─────────★•♛•★────────• ")
                         vc_errou = True
                         break
                 case 2:
                     print(perguntas[i]["dica"])
                 case 3:
+                    os.system("cls")
+                    print("•─────────★•♛•★────────• ")
+                    print("Você Pulou a Questão!")
+                    print("•─────────★•♛•★────────• ")
                     break
                 case 0:
                     vc_errou = True
@@ -106,6 +117,8 @@ while i < 10:
         if vc_errou:
             break
     except:
+        print("•─────────★•♛•★────────• ")
         print("Digite apenas 1, 2 ou 3")
+        print("•─────────★•♛•★────────• ")
         break
     i+=1
