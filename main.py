@@ -1,3 +1,16 @@
+#MELHORIAS A FAZER#
+
+#1.RANDOMIZAR AS PERGUNTAS
+#2.ADICIONAR PONTUAÇÃO/DINHEIRO
+#3.DIFICULDADE DAS PERGUNTAS
+#4.NÂO PARAR QUANDO DIGITAR ALGO ERRADO
+#5.LER O DICIONARIO ATRAVES DE UM ARQUIVO TXT PARA FACILITAR A LEITURA
+
+#SE DER TEMPO#
+
+#GRÁFICOS PARA SABER A PORCENTAGEM DE ACERTO
+#SALVAR COMO CSV
+
 import os
 
 perguntas = [
@@ -70,8 +83,9 @@ perguntas = [
     }
 ]
 
+certos = 0
 i = 0
-vc_errou = False
+
 print("•─────────★•♛•★────────• ")
 print("Bem vindo ao Show do Pythão!")
 print("•─────────★•♛•★────────• ")
@@ -96,13 +110,13 @@ while i < 10:
                         print("---⭐---")
                         print("Parabéns! você acertou!")
                         print("•─────────★•♛•★────────• ")
-                        break
+                        acertos += 1
+                        break 
                     else:
                         print("•─────────★•♛•★────────• ")
                         print("Você errou! 😂")
                         print("•─────────★•♛•★────────• ")
-                        vc_errou = True
-                        break
+                        break 
                 case 2:
                     print(perguntas[i]["dica"])
                 case 3:
@@ -110,15 +124,17 @@ while i < 10:
                     print("•─────────★•♛•★────────• ")
                     print("Você Pulou a Questão!")
                     print("•─────────★•♛•★────────• ")
-                    break
+                    break 
                 case 0:
-                    vc_errou = True
+                    print("Saindo do quiz...")
+                    i = 10 
                     break
-        if vc_errou:
-            break
-    except:
-        print("•─────────★•♛•★────────• ")
-        print("Digite apenas 1, 2 ou 3")
-        print("•─────────★•♛•★────────• ")
+                case _:
+                    print("Opção inválida, digite 0, 1, 2 ou 3.")
+        i += 1
+    except Exception as e:
+        print("Erro: digite apenas números válidos.")
         break
-    i+=1
+
+with open("resultado.txt", "w", encoding="utf-8") as arquivo:
+    arquivo.write(f"Você acertou {acertos} de 10 perguntas!\n")
