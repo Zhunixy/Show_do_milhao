@@ -1,8 +1,0 @@
-O que o comando print("Olá, mundo!") faz?;fácil; Cria uma variável; Imprime um valor na tela; Lê uma entrada do usuário; Fecha o programa;B;Usado para exibir textos ou valores no console
-Qual é o operador de adição em Python?;fácil; -; *; +; /;C;O sinal de "+" é usado para somar números
-Qual destas é uma estrutura de repetição em Python?;fácil; if; elif; while; def;C;while é usado para criar loops
-Como declaramos uma função em Python?;fácil; func nome():; function nome():; define nome():; def nome():;D;Usamos def seguido do nome da função
-Qual desses é um tipo de dado em Python?;fácil; texto; inteiro; número; string;D;"string" representa texto entre aspas
-O que faz o comando input()?;fácil; Exibe uma mensagem de erro; Compara dois valores; Recebe dados do usuário; Fecha o programa;C;input() captura o que o usuário digita
-Qual é o resultado de 3 * 2 em Python?;fácil; 5; 6; 8; 9;B;Multiplicação simples: 3 vezes 2.
-Qual é o símbolo de atribuição de valor em Python?;fácil; ==; :=; =; =>;C;O sinal = é usado para atribuir valores
